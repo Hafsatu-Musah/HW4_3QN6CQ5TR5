@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for
 import datetime
 from io import StringIO
 import requests
@@ -28,10 +28,22 @@ def fetch_data(url, date=None):
     return data
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
     data = fetch_data(url)
-    return render_template('HW4_3QN6CQ5TR5.html', countries=countries, data=data)
+    res = {}
+    if request.method == 'POST':
+        dform = request.form.get('west_africa')
+        for item in data:
+            if item['Country'] == str(dform):
+                res.update(item)
+                print(res)
+            return render_template('HW4_3QN6CQ5TR5.html', data=res)
+    elif request.method == 'GET':
+        for item in data:
+            if item['Country'] == 'Benin':
+                res.update(item)
+            return render_template('HW4_3QN6CQ5TR5.html', data=res, country=countries)
 
 
 if __name__ == "__main__":

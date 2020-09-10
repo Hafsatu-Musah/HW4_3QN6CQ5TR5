@@ -51,35 +51,49 @@
                     <img src="../static/img/icons8-globe-100.png" alt="" srcset="">     
             </div>
             <h6>Stats Overview</h6>
-            <form action="#" method="get">
-                <select name="west_africa" id="global_tins">
-                    {% for country in countries %}
-                      <option value={{country}}>{{country}}</option>
-                    {% endfor %}
-                  </select>
-            </form>
+            <form action="/" method="post" id="myform">
+                <select name="west_africa" id="global_tins" onchange="document.getElementById('myform').submit()">
+                  <option value="Benin" selected="selected">Benin</option>
+                  <option value="Burkina Faso">Burkina Faso</option>
+                  <option value="Cape Verde">Cape Verde</option>
+                  <option value="Gambia">Gambia</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Guinea">Guinea</option>
+                  <option value="Guinea-Bissau">Guinea-Bissau</option>
+                  <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                  <option value="Liberia">Liberia</option>
+                  <option value="Mali">Mali</option>
+                  <option value="Mauritania">Mauritania</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Senegal">Senegal</option>
+                  <option value="Sierra Leone">Sierra Leone</option>
+                  <option value="Togo">Togo</option>
+                </select>
+              </form>
+            
             </div>
-            <div class="stat">
+            <div class="stat" id="st1">
                 <div class="stimg">
                         <img src="../static/img/active.png" alt="" srcset="">
                 </div>
                 <h6>Total Coronavirus Cases</h6>
-                    <p>56222</p>
+                    <p>{{data.Confirmed}}</p>
             </div>
                 
-            <div class="stat">
+            <div class="stat" >
                 <div class="stimg">
                         <img src="../static/img/recovered.png" alt="" srcset="">
                 </div>
                 <h6>Total Recovered</h6>
-                    <p>6656</p>
+                    <p>{{data.Recovered}}</p>
             </div>
             <div class="stat">
                 <div class="stimg">
                         <img src="../static/img/deaths.png" alt="" srcset="">
                 </div>
                 <h6>Total Deaths</h6>
-                <h4>263552</h4>
+                <h4>{{data.deaths}}</h4>
             </div>
             
             
@@ -90,9 +104,8 @@
             <div class="affected">
                 <div class="affectedareas">
                     <div class="t">
-                    <h4 class="text"> Covid-19 Affected Areas</h4>
-                    <p class="text"><span>affected</span></p>
-                    <p class="text"><span>Less Affected</span></p>
+                    <h4 class="text"> Covid-19 Affected Areas <span> Affected  Less Affected</span></h4>
+                   
                     <div class="map">
     <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" enable_background="new 0 0 2000 2000"
@@ -949,7 +962,7 @@
                 <div class="loc">
                     <div class="inloc">
                      <input type="text" name="filter" id="filter"  placeholder="Filter to a location..." class="allinputs" > 
-                     <input type="text" name="filter" id="filter"  placeholder="Global                      1,245.347" class="allinputs" > 
+                     <input type="text" name="filter" id="filter"  placeholder="Global                                             1,245.347" class="allinputs" > 
                      <hr>
                      <div class="allinputs" id="all">
                          <img src="../static/img/italy.png" alt="" srcset="">
@@ -977,9 +990,10 @@
                     </div>
                      <div class="allinputs" id="all">
                        <img src="../static/img/france.png" alt="" srcset="">
-                       <p>France</p> <span>530</span>                     </div>
+                       <p>France</p> <span>230</span>
+                     </div>
                      <div class="allinputs" id="all">
-                       <img src="../static/img\china.png" alt="" srcset="">
+                       <img src="../static/img/china.png" alt="" srcset="">
                        <p>China</p> <span>150</span>                     
                     </div>
                     </div>
@@ -990,14 +1004,13 @@
         <div class="lastbox">
             <div class="widimg">
                 <img src="../static/img/coronavirus-vectorwhite.png" alt="" >
-                <h6>COVID-19</h6>
-                <p>Hafsat Designs, an online marketplace, built to cope with promising future </p>
+                
+                <p>Hafsat Designs, an online marketplace, built to cope with promising and exciting future. </p>
             </div>
             <div class="widimg" id="u">
                 <p>Useful links <br>
                   <p class="y"> why?</p> 
                   About <br>
-                  Carrers <br>
                   Blog <br>
                   Contract <br>
                   <span>T&C  <br>
@@ -1006,12 +1019,7 @@
                   
                 </p>
             </div>
-            <!-- <div class="useful" id="">
-                <p>T&C  <br>
-                  FAQ  <br>
-                  Privacy Policy
-                </p>
-            </div> -->
+            
             <div class="widimg" id="use">
                 <p>
                     CONTACT US<br>

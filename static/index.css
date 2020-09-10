@@ -106,17 +106,17 @@ width: 40%;
     margin-left: 2%;
     height: 130px;
     width: 22%;
-     border: 1px solid greenyellow;
+    
 }
 .stat h6{
     position: relative;
-    left: 15%;
+    left: 18%;
     padding-top: 40px;
     
 }
 .stat h4{
     padding-top: 10px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 .stimg> img{
     width: 5vw;
@@ -126,9 +126,13 @@ width: 40%;
     right: 70%;
     padding-top: 25px;
 }
-.stat option{
-    padding-left: 10px;
+form{
+   position: relative;
+    padding-left: 30%;
+    border: solid 1px honeydew;
+    border-radius: 4px;
 }
+
 .ash{
     background-color: #F2F3F7;
     height: 700px;
@@ -137,6 +141,11 @@ width: 40%;
 .text {
     display: inline-block;
     text-align: justify;
+}
+.text span{
+    position : relative;
+    left:50%;
+    word-spacing: 2%;
 }
 .affected{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -166,7 +175,7 @@ path{
     transition: ease-in-out;
 }
 path:hover{
-    fill: rgb(177, 190, 51);
+    fill: rgb(194, 28, 105);
     cursor: pointer;
 }
 svg{
@@ -272,24 +281,22 @@ hr{
      margin-left: 10%;
     
  }
- #keep p{
-     margin-left: 15%;
+ #keep {
+    
+     padding-left: 15%;
+ }
+ #keep div{
+     padding-top: 10px;
  }
 
  .d2{
     display: inline-block;
     color: red;
-    /* margin-left: 2%; */
-    /* border: solid whitesmoke 0.5px;
-    border-radius: 360px; */
     width: 60px;
     height: 60px;
     
  }
- .d2 i{
-     
-    right:2% ;
- }
+ 
 .copy{
     height: 100px;
     background-color: #262C7C;
